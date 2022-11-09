@@ -4,10 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Characters game</title>
   </head>
   <body>
-    <h1 class="text-9xl">Hello World</h1>
-    <script type="module" src="/main.js"></script>
-  </body>
+  <div class="fullscreen">
+    <div class="container">
+      <div class="card card_2" style="background:url('img/Jon_Snow_Infobox.webp') no-repeat 50%/cover">
+        <div class="content">
+          <h2 class="title">Jon Snow</h2>
+        </div>
+        <div class="sinopse">
+          <div class="content-sinopse">
+            <h2 class="title">Jon Snow</h2>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in hendrerit nulla, sed congue lorem. Phasellus sollicitudin tortor dui, id scelerisque ipsum ultrices vitae. Cras sed laoreet odio, vel ornare enim. Quisque porta quam at augue posuere, id luctus velit ullamcorper. Aenean sapien ligula, malesuada in mollis eu, vestibulum ut quam.
+            </p>
+          </div>
+          <a class="view" href="#">More informations</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="main.js"></script>  </body>
 </html>
