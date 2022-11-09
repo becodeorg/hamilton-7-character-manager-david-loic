@@ -49,21 +49,21 @@ function getCharacter() {
             // Create a link to the description of the card
             const cardLink = document.createElement("a");
             cardLink.classList.add("view");
-            cardLink.innerHTML = `<a class="view" href="editCharacter.html">More infos</a>`
+            cardLink.innerHTML = `<a class="view" href="#">More infos</a>`
             //cardLink.innerHTML = `<a class="view" href="editCharacter=${id}.html">More informations</a>` // TODO GET ID
             cardContent.appendChild(cardLink);
 
             // Create button edit card
             const buttonEdit = document.createElement("button");
             const textButtonEdit = document.createTextNode("Edit the card");
-            buttonEdit.classList.add("btn-edit", `data-modal-toggle=`); /////// TODO change the toggle
+            buttonEdit.classList.add("btn-edit")
             buttonEdit.appendChild(textButtonEdit);
             cardContent.appendChild(buttonEdit);
 
             // Create button delete card
             const buttonDelete = document.createElement("button");
             const textButtonDelete = document.createTextNode("Delete the card");
-            buttonEdit.classList.add("btn-delete"); /////// TODO change the toggle
+            buttonEdit.classList.add("btn-delete");
             buttonEdit.appendChild(textButtonDelete);
             cardContent.appendChild(buttonDelete);
 
@@ -73,12 +73,11 @@ function getCharacter() {
             characterDescription.innerHTML = value.data[i].description;
             //image.src = "data:image/*;base64," + value.data[i].image;
             newCard.style.background= `url(${"data:image/*;base64," + value.data[i].image})no-repeat 50%/cover`;
-            newCard.dataset.id = value.data[i].id;
+            cardLink.dataset.id = value.data[i].id;
           }
         }
     })
 }
-
 getCharacter();
 
 
@@ -86,5 +85,14 @@ getCharacter();
 function idUrl(){
   let x = document.activeElement.id;
   console.log(x);
-  location.href = "apps-online.html?page=" + x;
+  //location.href = "editCharacter.html?page=" + x; // TODO: change this
 }
+const card = document.querySelector('.card')
+const cardLink = document.querySelector('.view');
+
+document.addEventListener("click", (e) => {
+  let id = e.target.parentElement.dataset.id;
+  alert(id);
+})
+
+
