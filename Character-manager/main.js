@@ -16,6 +16,11 @@ function getCharacter() {
             cardDivContainer.classList.add("content");
             newCard.appendChild(cardDivContainer);
 
+            //Create an image to display the character
+            //const image = document.createElement("img");
+            //image.classList.add("img");
+            //newCard.appendChild(image);
+
             // Create h2 to display the name of the character
             const characterName = document.createElement("h2");
             characterName.classList.add("title");
@@ -66,7 +71,8 @@ function getCharacter() {
             characterName.innerHTML = value.data[i].name;
             characterNameBack.innerHTML = value.data[i].name;
             characterDescription.innerHTML = value.data[i].description;
-            cardDivContainer.src = "data:image/*;base64," + value.data[i].image;
+            //image.src = "data:image/*;base64," + value.data[i].image;
+            newCard.style.background= `url(${"data:image/*;base64," + value.data[i].image})no-repeat 50%/cover`;
             newCard.dataset.id = value.data[i].id;
           }
         }
@@ -74,3 +80,11 @@ function getCharacter() {
 }
 
 getCharacter();
+
+
+// Add the id of the selected card to the url
+function idUrl(){
+  let x = document.activeElement.id;
+  console.log(x);
+  location.href = "apps-online.html?page=" + x;
+}
