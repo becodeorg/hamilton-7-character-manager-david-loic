@@ -44,6 +44,8 @@ function getCharacter() {
             // Create a link to the description of the card
             const cardLink = document.createElement("a");
             cardLink.classList.add("view");
+            cardLink.innerHTML = `<a class="view" href="editCharacter.html">More infos</a>`
+            //cardLink.innerHTML = `<a class="view" href="editCharacter=${id}.html">More informations</a>` // TODO GET ID
             cardContent.appendChild(cardLink);
 
             // Create button edit card

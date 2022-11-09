@@ -10,5 +10,7 @@ module.exports = {
       centerImg: '50%/cover',
     }
   },
-  plugins: [],
+  plugins: [
+    require('@themesberg/flowbite/plugin')
+  ]
 }
