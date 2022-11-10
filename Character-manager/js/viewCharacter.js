@@ -22,9 +22,6 @@ fetch(url)
         if (confirm('Are you sure ?')) {
           fetch(`https://character-database.becode.xyz/characters/${characterId}`, {
             method: 'DELETE',
-            headers: {
-              "Content-Type": "application/json",
-            },
           });
           alert("Delete")
           window.location.href = "index.html"
