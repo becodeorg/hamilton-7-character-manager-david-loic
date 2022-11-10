@@ -48,23 +48,23 @@ function getCharacter() {
 
             // Create a link to the description of the card
             const cardLink = document.createElement("a");
-            cardLink.innerHTML = `<a class="view" href="#">More infos</a>`
+            cardLink.innerHTML = `<a class="view" href="viewCharacter.html">More infos</a>`
             //cardLink.innerHTML = `<a class="view" href="editCharacter=${id}.html">More informations</a>` // TODO GET ID
             cardContent.appendChild(cardLink);
 
             // Create button edit card
-            const buttonEdit = document.createElement("button");
-            const textButtonEdit = document.createTextNode("Edit the card");
-            buttonEdit.classList.add("btn-edit")
-            buttonEdit.appendChild(textButtonEdit);
-            cardContent.appendChild(buttonEdit);
+            //const buttonEdit = document.createElement("button");
+            //const textButtonEdit = document.createTextNode("Edit the card");
+            //buttonEdit.classList.add("btn-edit")
+            //buttonEdit.appendChild(textButtonEdit);
+            //cardContent.appendChild(buttonEdit);
 
             // Create button delete card
-            const buttonDelete = document.createElement("button");
-            const textButtonDelete = document.createTextNode("Delete the card");
-            buttonEdit.classList.add("btn-delete");
-            buttonEdit.appendChild(textButtonDelete);
-            cardContent.appendChild(buttonDelete);
+            //const buttonDelete = document.createElement("button");
+            //const textButtonDelete = document.createTextNode("Delete the card");
+            //buttonEdit.classList.add("btn-delete");
+            //buttonEdit.appendChild(textButtonDelete);
+            //cardContent.appendChild(buttonDelete);
 
             // Adding value to the cards
             characterName.innerHTML = value.data[i].name;
