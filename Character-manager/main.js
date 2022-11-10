@@ -1,4 +1,8 @@
-function getCharacter() {
+import axios from "axios";
+const url = "https://character-database.becode.xyz/characters";
+const body = document.querySelector("body");
+
+function displayListCharacter() {
   axios
       .get("https://character-database.becode.xyz/characters")
       .then(function (response) {
@@ -48,8 +52,7 @@ function getCharacter() {
 
             // Create a link to the description of the card
             const cardLink = document.createElement("a");
-            cardLink.innerHTML = `<a class="view" href="viewCharacter.html">More infos</a>`
-            //cardLink.innerHTML = `<a class="view" href="editCharacter=${id}.html">More informations</a>` // TODO GET ID
+            cardLink.innerHTML = `<a class="view" href="viewCharacter.html?id=${value.data[i].id}">More infos</a>`
             cardContent.appendChild(cardLink);
 
             // Create button edit card
@@ -77,21 +80,36 @@ function getCharacter() {
         }
     })
 }
-getCharacter();
+displayListCharacter();
 
-
-// Add the id of the selected card to the url
-function idUrl(){
-  let x = document.activeElement.id;
-  console.log(x);
-  //location.href = "editCharacter.html?page=" + x; // TODO: change this
-}
 const cards = document.querySelectorAll('.card')
 const cardLinks = document.querySelectorAll('a');
 
-document.addEventListener('click', (e) => {
-  if(e.target.classList.contains('view')) {
-    console.log("id:", e.target.parentElement.dataset.id);
-  }
-});
+function getId() {
+  document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('view')) {
+      console.log("id:", e.target.parentElement.dataset.id);
+      return e.target.parentElement.dataset.id
+    }
+  });
+}
+
+
+
+async function displayHero(id) {
+
+  axios
+      .get(`https://character-database.becode.xyz/characters/${characterId}`)
+      .then(function (response) {
+        api_details(response);
+        function api_details(value) {
+
+          // Create container
+          const container = document.createElement("div");
+          container.classList.add("card");
+          body.appendChild(container);
+          container.textContent = value.data.name;
+        }
+  })
+}
 
