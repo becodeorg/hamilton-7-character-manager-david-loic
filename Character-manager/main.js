@@ -94,22 +94,3 @@ function getId() {
   });
 }
 
-
-
-async function displayHero(id) {
-
-  axios
-      .get(`https://character-database.becode.xyz/characters/${characterId}`)
-      .then(function (response) {
-        api_details(response);
-        function api_details(value) {
-
-          // Create container
-          const container = document.createElement("div");
-          container.classList.add("card");
-          body.appendChild(container);
-          container.textContent = value.data.name;
-        }
-  })
-}
-
