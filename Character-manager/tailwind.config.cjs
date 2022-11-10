@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {}
+    ,
+    backgroundPosition: {
+      centerImg: '50%/cover',
+    }
   },
-  plugins: [],
+  plugins: [
+    require('@themesberg/flowbite/plugin')
+  ]
 }

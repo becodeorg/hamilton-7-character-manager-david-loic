@@ -1,24 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .fullscreen {
   width:100vw;
   height:100vh;
+  background:#201f25;
   .container {
-    padding:4rem;
+    padding:15px;
+    max-width:700px;
     margin:auto;
-    height:auto;
-    display:grid;
-    grid-template-columns: repeat(4, auto);
-    column-gap: 2rem;
-    row-gap: 6rem;
+    height:100%;
+    display:flex;
     align-items:center;
     justify-content:space-around;
     .card {
       overflow:hidden;
-      min-width: 13rem;
-      min-height: 20rem;
+      width:17rem;
+      height:25rem;
       background:#fff;
       box-shadow:1px 22px 44px rgba(0,0,0,.19);
       transition:0.6s;
@@ -63,7 +58,7 @@
         padding:25px 25px 50px 25px;
         .title{
           width:100%;
-          color:pink;
+          color:#fff;
           font-family: 'Cinzel';
           font-size:2rem;
           font-weight:300;
@@ -106,7 +101,7 @@
         }
         .content-sinopse{
           .title{
-            color:pink;
+            color:rgba(255,255,255,.6);
             font-size:22px;
             font-weight:900;
             margin-bottom:12px;
@@ -122,6 +117,10 @@
           }
         }
       }
+      &_2 {
+        background:url('img/Jon_Snow_Infobox.webp') no-repeat 47%/cover;
+      }
+
     }
   }
 }
