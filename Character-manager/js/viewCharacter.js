@@ -10,7 +10,7 @@ fetch(url)
       data.forEach(element => {
         if (characterId === element.id) {
           document.getElementById("edit").addEventListener('click', async () => {
-            window.location.href = `editCharacter.html?${characterId}`
+            window.location.href = `editCharacter.html?id=${characterId}`
           });
           document.querySelector(".solo__img").src = `data:image/png;base64, ${element.image}`;
           document.querySelector('.solo__h2').innerText = element.name;

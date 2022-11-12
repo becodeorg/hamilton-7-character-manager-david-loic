@@ -1,4 +1,4 @@
-document.querySelector("input[type=file]").addEventListener("change", (e) => {
+document.querySelector("#image").addEventListener("change", (e) => {
   const file = e.target.files[0];
   const reader = new FileReader();
 
@@ -13,7 +13,7 @@ document.querySelector("input[type=file]").addEventListener("change", (e) => {
 image.onchange = () => {
   const [file] = image.files
   if (file) {
-    imageNew.src = URL.createObjectURL(file)
+   imageNew.src = URL.createObjectURL(file)
   }
 }
 document.querySelector('#submit').addEventListener("click", (event) => {
@@ -25,7 +25,7 @@ document.querySelector('#submit').addEventListener("click", (event) => {
   shortDescription = shortDescription.value;
   description = description.value;
 
-  if(name.length == 0 || short.length == 0 || description.length == 0 || image.length == 0) {
+  if(name.length == 0 || shortDescription.length == 0 || description.length == 0 || image.length == 0) {
     alert('Please fill everything')
   } else {
     const dataToAdd = fetch('https://character-database.becode.xyz/characters/', {
@@ -34,14 +34,14 @@ document.querySelector('#submit').addEventListener("click", (event) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        image,
-        name,
-        shortDescription,
-        description,
+        image: image,
+        name: name,
+        shortDescription: shortDescription,
+        description: description,
       }),
 
     });
     alert('Character added !')
-    //window.location.href = "index.html"
+    window.location.href = "index.html"
   }
 });

@@ -1,11 +1,11 @@
 import axios from "axios";
 const url = "https://character-database.becode.xyz/characters";
 const body = document.querySelector("body");
-
+const search = document.querySelector("#search");
 function displayListCharacter() {
   axios
-      .get("https://character-database.becode.xyz/characters")
-      .then(function (response) {
+      .get(url)
+      .then( function (response) {
         for (let i = 0; i < response.data.length; i++) {
           api_details(response);
           function api_details(value) {
@@ -13,17 +13,13 @@ function displayListCharacter() {
             // create new card
             const newCard = document.createElement("div");
             newCard.classList.add("card");
+            newCard.classList.add("swiper-slide");
             container.appendChild(newCard);
 
             // Create new div to the content
             const cardDivContainer = document.createElement("div");
             cardDivContainer.classList.add("content");
             newCard.appendChild(cardDivContainer);
-
-            //Create an image to display the character
-            //const image = document.createElement("img");
-            //image.classList.add("img");
-            //newCard.appendChild(image);
 
             // Create h2 to display the name of the character
             const characterName = document.createElement("h2");
@@ -55,25 +51,10 @@ function displayListCharacter() {
             cardLink.innerHTML = `<a class="view" href="viewCharacter.html?id=${value.data[i].id}">More infos</a>`
             cardContent.appendChild(cardLink);
 
-            // Create button edit card
-            //const buttonEdit = document.createElement("button");
-            //const textButtonEdit = document.createTextNode("Edit the card");
-            //buttonEdit.classList.add("btn-edit")
-            //buttonEdit.appendChild(textButtonEdit);
-            //cardContent.appendChild(buttonEdit);
-
-            // Create button delete card
-            //const buttonDelete = document.createElement("button");
-            //const textButtonDelete = document.createTextNode("Delete the card");
-            //buttonEdit.classList.add("btn-delete");
-            //buttonEdit.appendChild(textButtonDelete);
-            //cardContent.appendChild(buttonDelete);
-
             // Adding value to the cards
             characterName.innerHTML = value.data[i].name;
             characterNameBack.innerHTML = value.data[i].name;
             characterDescription.innerHTML = value.data[i].description;
-            //image.src = "data:image/*;base64," + value.data[i].image;
             newCard.style.background= `url(${"data:image/*;base64," + value.data[i].image})no-repeat 50%/cover`;
             cardLink.dataset.id = value.data[i].id;
           }
@@ -94,3 +75,12 @@ function getId() {
   });
 }
 
+search.addEventListener('click', (e) => {
+//Masquer la liste des characters
+  for (let i = 0; i < cards.length; i++) {
+      cards[i].style.display = "none";
+  }
+
+  //Récupérer la valeur de l'input
+  //const search = document.querySelector("#input").value;
+})
