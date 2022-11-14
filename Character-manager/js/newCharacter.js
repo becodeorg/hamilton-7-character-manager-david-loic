@@ -16,6 +16,7 @@ image.onchange = () => {
    imageNew.src = URL.createObjectURL(file)
   }
 }
+
 document.querySelector('#submit').addEventListener("click", (event) => {
   event.preventDefault();
   let shortDescription = document.querySelector("#short");

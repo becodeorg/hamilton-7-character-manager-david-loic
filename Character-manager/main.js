@@ -48,7 +48,7 @@ function displayListCharacter() {
 
             // Create a link to the description of the card
             const cardLink = document.createElement("a");
-            cardLink.innerHTML = `<a class="view" href="viewCharacter.html?id=${value.data[i].id}">More infos</a>`
+            cardLink.innerHTML = `<a class="view" href="./viewCharacter.html?id=${value.data[i].id}">More infos</a>`
             cardContent.appendChild(cardLink);
 
             // Adding value to the cards
