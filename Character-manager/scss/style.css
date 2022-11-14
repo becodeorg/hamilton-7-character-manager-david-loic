@@ -120,4 +120,65 @@
   font-size: 14px;
 }
 
+.section__container {
+  background-blend-mode: overlay, overlay, normal;
+  background-color: #F3F4F6;
+  background-image: radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), transparent), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.281);
+}
+.section__container .containerInner {
+  width: 100%;
+}
+
+.profileImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 3px rgb(2, 2, 2) solid;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.uploadContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.uploadContainer #uploadImage {
+  margin-bottom: 20px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+}
+
+.charaForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.charaForm.charaForm * {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.containerInner__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.containerInner__buttons.containerInner__buttons * {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

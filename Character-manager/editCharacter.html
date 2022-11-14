@@ -37,7 +37,28 @@
         </div>
     </div>
 </nav>
-<body>
-
+<body class="fullscreen">
+<div class="flex justify-center mt-20">
+    <main class="p-8 flex justify-center content-center flex-col w-1/2 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-stone-200 via-stone-200 to-white">
+        <div class="flex flex-col items-center">
+                <div>
+                    <img id="imageNew"/>
+                    <input id="image" type="file" class="input" value="">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="name" class="label">Name :</label>
+                    <input id="name" type="text" placeholder="Name..." class="input" value="">
+                    <label for="short" class="label">Short description :</label>
+                    <input id="short" type="text" class="input" placeholder="Short Description..." value="">
+                    <label for="description" class="label">Description :</label>
+                    <textarea id="description" type="text" class="input" placeholder="Description..." autocomplete="off"></textarea>
+                </div>
+                <div class="flex justify-center pt-4 ">
+                    <button id="submit" class="bg-rose-400 hover:bg-rose-500 text-white font-bold py-2 px-4 border-b-4 border-stone-400 rounded" type="submit">Create new character</button>
+                </div>
+        </div>
+    </main>
+</div>
+<script src="js/editCharacter.js"></script>
 </body>
 </html>
