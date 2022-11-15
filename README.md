@@ -22,4 +22,7 @@ We used Tailwind + SCSS for the styling and javascript (axios) for fetching the 
 Deploying the project using vite. (Loïc)
 Understanding, installing & using Tailwind. (David)
 
+## Link to the website
+https://main--warm-praline-b07a8d.netlify.app/index.html
+
 
