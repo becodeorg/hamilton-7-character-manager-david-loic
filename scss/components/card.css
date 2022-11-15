@@ -1,25 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 .fullscreen {
   width: 100vw;
   height: 100vh;
+  background: #201f25;
 }
 .fullscreen .container {
-  padding: 4rem;
+  padding: 15px;
+  max-width: 700px;
   margin: auto;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  column-gap: 2rem;
-  row-gap: 6rem;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .fullscreen .container .card {
   overflow: hidden;
-  width: 15rem;
-  height: 20rem;
+  width: 17rem;
+  height: 25rem;
   background: #fff;
   box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.19);
   transition: 0.6s;
@@ -63,7 +59,7 @@
 }
 .fullscreen .container .card .content .title {
   width: 100%;
-  color: pink;
+  color: #fff;
   font-family: "Cinzel";
   font-size: 2rem;
   font-weight: 300;
@@ -105,7 +101,7 @@
   cursor: pointer;
 }
 .fullscreen .container .card .sinopse .content-sinopse .title {
-  color: pink;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 22px;
   font-weight: 900;
   margin-bottom: 12px;
@@ -119,66 +115,8 @@
   font-weight: 300;
   font-size: 14px;
 }
-
-.section__container {
-  background-blend-mode: overlay, overlay, normal;
-  background-color: #F3F4F6;
-  background-image: radial-gradient(79.69% 102.24% at 100% 100.11%, rgba(0, 0, 0, 0.2), transparent), radial-gradient(89.7% 115.09% at 3.43% 2.75%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3rem;
-  border-radius: 10px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.281);
-}
-.section__container .containerInner {
-  width: 100%;
+.fullscreen .container .card_2 {
+  background: url("img/Jon_Snow_Infobox.webp") no-repeat 47%/cover;
 }
 
-.profileImg {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  border: 3px rgb(2, 2, 2) solid;
-  overflow: hidden;
-  margin: auto;
-  margin-bottom: 3rem;
-}
-
-.uploadContainer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.uploadContainer #uploadImage {
-  margin-bottom: 20px;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-}
-
-.charaForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-.charaForm.charaForm * {
-  margin-bottom: 1rem;
-  border: none;
-  border-radius: 5px;
-}
-
-.containerInner__buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.containerInner__buttons.containerInner__buttons * {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=card.css.map */
