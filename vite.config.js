@@ -1,4 +1,3 @@
-const { resolve } = require("path");
 const { defineConfig } = require("vite");
 
 module.exports = defineConfig({
@@ -10,6 +9,7 @@ module.exports = defineConfig({
         view: "./viewCharacter.html",
         edit: "./editCharacter.html",
       },
+      target: "esnext",
     },
   },
 });
